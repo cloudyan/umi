@@ -293,7 +293,7 @@ app.use(async (req, res) => {
   });
 
   // support stream content
-  if (content instanceof Stream) {
+  if (html instanceof Stream) {
     html.pipe(res);
     html.on('end', function() {
       res.end();
